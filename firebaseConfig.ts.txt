@@ -1,0 +1,15 @@
+// firebaseConfig.ts
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCAX-u4jRFcsxnOlDFONeVym2GQJVak-OM", // Reemplaza si tu API Key cambia
+  authDomain: "clientes-tayro-pharma.firebaseapp.com",
+  projectId: "clientes-tayro-pharma",
+  storageBucket: "clientes-tayro-pharma.appspot.com",
+  messagingSenderId: "735795547782",
+  appId: "1:735795547782:web:d995c7f30623063b3d4b07"
+};
+
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);

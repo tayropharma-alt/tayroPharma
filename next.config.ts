@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/tayroPharma',
-  assetPrefix: '/tayroPharma/',
+  output: 'export'
 }
 
-module.exports = nextConfig;
+module.exports = nextConfig
+

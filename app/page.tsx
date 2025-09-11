@@ -1,10 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
-const productos = [
+type Producto = {
+  id: number;
+  nombre: string;
+  precio: number;
+  categoria: string;
+  imagen: string;
+  stock: number;
+  masVendido?: boolean;
+};
+
+type ProductoEnCarrito = Producto & {
+  cantidad: number;
+};
+
+const productos: Producto[] = [
   { id: 1, nombre: "Ibuprofeno Suspensión Genfar Kids 120 ml", precio: 6000, categoria: "Genfar", imagen: "/ibuprofeno.jpg", stock: 5, masVendido: true },
-  { id: 2, nombre: "Acetaminofén 500mg", precio: 5000, categoria: "La Santé", imagen: "/acetaminofen.jpg", stock: 30, masVendido: true }, // 🔴 Agotado
+  { id: 2, nombre: "Acetaminofén 500mg", precio: 5000, categoria: "La Santé", imagen: "/acetaminofen.jpg", stock: 30, masVendido: true },
   { id: 3, nombre: "Omeprazol 20mg", precio: 12000, categoria: "Genfar", imagen: "/omeprazol.jpg", stock: 10 },
   { id: 4, nombre: "Loratadina 10mg Caja x10", precio: 9000, categoria: "La Santé", imagen: "/loratadina.jpg", stock: 20 },
 ];
@@ -28,7 +43,7 @@ const categorias = [
 ];
 
 export default function Page() {
-  const [carrito, setCarrito] = useState<any[]>([]);
+  const [carrito, setCarrito] = useState<ProductoEnCarrito[]>([]);
   const [search, setSearch] = useState("");
   const [categoria, setCategoria] = useState("Productos más Vendidos");
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
@@ -36,7 +51,7 @@ export default function Page() {
   const normalize = (s: string) =>
     s.normalize?.("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-  const agregarAlCarrito = (producto: any) => {
+  const agregarAlCarrito = (producto: Producto) => {
     if (producto.stock <= 0) return;
     setCarrito((prev) => {
       const existe = prev.find((item) => item.id === producto.id);
@@ -78,13 +93,13 @@ export default function Page() {
   const productosFiltrados = productos.filter((p) => {
     const q = search.trim();
 
-    // 🔎 búsqueda global en todos los productos
+    // búsqueda global en todos los productos
     if (q !== "") {
       const nq = normalize(q);
       return normalize(p.nombre).includes(nq) || normalize(p.categoria).includes(nq);
     }
 
-    // 📦 cuando no hay búsqueda
+    // cuando no hay búsqueda
     if (categoria === "Todos") {
       // excluye los más vendidos
       return !p.masVendido;
@@ -169,11 +184,14 @@ export default function Page() {
                   </span>
                 )}
 
-                <img
+                <Image
                   src={producto.imagen}
                   alt={producto.nombre}
-                  className="w-full h-40 object-cover rounded-lg mb-3"
+                  width={400}
+                  height={160}
+                  className="rounded-lg mb-3 object-cover"
                 />
+
                 <h2 className="text-lg font-semibold text-blue-600">
                   {producto.nombre}
                 </h2>

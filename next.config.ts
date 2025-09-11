@@ -1,15 +1,8 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'export',
   basePath: '/tayroPharma',
-  assetPrefix: '/tayroPharma', // 👉 Esto es CRUCIAL para GitHub Pages
-  images: {
-    unoptimized: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
+  assetPrefix: '/tayroPharma/',
+}
 
-export default nextConfig;
+module.exports = nextConfig;

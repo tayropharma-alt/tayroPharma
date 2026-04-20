@@ -524,8 +524,8 @@ const productos: Producto[] = [
 { id: 272, nombre: "Ibuprofeno 800mg x300 Tbs", precio: 55500, categoria: "Laproff", imagen: "/i800.png", stock: 20 },
 { id: 273, nombre: "Tiamina 300mg x250 Tbs", precio: 42300, categoria: "Laproff", imagen: "/tiaa.png", stock: 6 },
 { id: 274, nombre: "Carbamazepina 200mg x300 Tbs", precio: 120300, categoria: "Laproff", imagen: "/carb.png", stock: 4 }, // Próximo a llegar
-{ id: 811, nombre: "Esomeprazol 20mg x100 Tbs", precio: 58200, categoria: "Laproff", imagen: "/e40pp.png", stock: 50 },
-{ id: 1811, nombre: "Fluconazol 200mg x100 Caps", precio: 73700, categoria: "Laproff", imagen: "/flu100.png", stock: 100 },
+{ id: 811, nombre: "Esomeprazol 20mg x100 Tbs", precio: 58200, categoria: "Laproff", imagen: "/e40pp.png", stock: 0 },
+{ id: 1811, nombre: "Fluconazol 200mg x100 Caps", precio: 73600, categoria: "Laproff", imagen: "/flu100.png", stock: 0 },
 { id: 7267, nombre: "Losartán Potásico 50mg x30 Tbs", precio: 3400, categoria: "Laproff", imagen: "/lp30.png", stock: 200 },
 { id: 2272, nombre: "Trimebutina 200mg x300 Tbs", precio: 101000, categoria: "Laproff", imagen: "/trimelp.png", stock: 4 },
 

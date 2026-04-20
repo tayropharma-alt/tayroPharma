@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +33,10 @@ export const metadata: Metadata = {
     "productos farmacéuticos",
   ],
   icons: {
-    // Favicon clásico
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.png", type: "image/png" }, // opcional, por si prefieres PNG
+      { url: "/favicon.png", type: "image/png" },
     ],
-    // Icono para iPhone/iPad al “Agregar a la pantalla de inicio”
     apple: [{ url: "/apple-touch-icon.png" }],
   },
   openGraph: {
@@ -48,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Distribuidora Tayro Pharma SAS",
     images: [
       {
-        url: "/logo-tayro.png", // imagen cuadrada o 1200x630
+        url: "/logo-tayro.png",
         width: 512,
         height: 512,
         alt: "Distribuidora Tayro Pharma SAS",
@@ -72,6 +71,23 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* ✅ Google Analytics con el ID correcto */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-QNCRKP13Z6"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QNCRKP13Z6', {
+              page_path: window.location.pathname,
+              anonymize_ip: true,
+            });
+          `}
+        </Script>
+
         {children}
       </body>
     </html>

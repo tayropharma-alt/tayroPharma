@@ -139,7 +139,6 @@ const productos: Producto[] = [
   { id: 673, nombre: "Manteca de Cacao Kevs (Natural) x12und", precio: 21189, categoria: "Más Vendidos", imagen: "/kevsn.png", stock: 50, masVendido: true, ivaIncluido: true },
   { id: 640, nombre: "Vaselina en Lata Roja x12und", precio: 4205, categoria: "Más Vendidos", imagen: "/vr.png", stock: 100, masVendido: true, ivaIncluido: true },
   { id: 1640, nombre: "Chapet Protector Labial x24und", precio: 64000, categoria: "Más Vendidos", imagen: "/chape.png", stock: 10, masVendido: true, },
-  { id: 7016, nombre: "Vaselina Pura Kevs x25gr", precio: 2594, categoria: "Más Vendidos", imagen: "/v25.png", stock: 50, masVendido: true, ivaIncluido: true },
 
 
   { id: 4840, nombre: "Ortoflex L Naproxeno + Cafeina x36 Tbs", precio: 38900, categoria: "Memphis", imagen: "/ortoflex.png", stock: 50, masVendido: true, },
@@ -657,11 +656,10 @@ const productos: Producto[] = [
 { id: 1367, nombre: "Azitromicina Suspensión x15 ml Coas", precio: 10500, categoria: "CoasPharma", imagen: "/azico.png", stock: 50 },
 { id: 368, nombre: "Clotrimazol 500mg", precio: 3400, categoria: "CoasPharma", imagen: "/sec500c.png", stock: 120 },
 { id: 369, nombre: "Amlodipino 5mg x10 Tbs", precio: 1500, categoria: "CoasPharma", imagen: "/am5mg.png", stock: 100 },
-{ id: 370, nombre: "Metoclopramida 10mg x30 Tbs", precio: 2900, categoria: "CoasPharma", imagen: "/mtcc.png", stock: 0 },
+{ id: 370, nombre: "Metocarbamol 750mg x30 Tbs", precio: 11800, categoria: "CoasPharma", imagen: "/mm750.png", stock: 100 },
 { id: 371, nombre: "Propanolol 40mg x20 Tbs", precio: 1700, categoria: "CoasPharma", imagen: "/propa.png", stock: 200 },
 { id: 372, nombre: "Clorfeniramina Maleato 4mg x20 Tbs", precio: 2400, categoria: "CoasPharma", imagen: "/clorco.png", stock: 100 },
 { id: 373, nombre: "Prednisolona 5mg x30 Tbs", precio: 3300, categoria: "CoasPharma", imagen: "/pred30.png", stock: 100 },
-{ id: 7422, nombre: "Metocarbamol 750mg x30 Tbs", precio: 11800, categoria: "CoasPharma", imagen: "/mm750.png", stock: 100 },
 
 { id: 4689, nombre: "Ampicilina 250mg/5ml Suspensión x60 ml", precio: 10500, categoria: "CoasPharma", imagen: "/amsus.png", stock: 100 },
 { id: 7153, nombre: "Flunarizina 10mg x20 Tbs", precio: 2800, categoria: "CoasPharma", imagen: "/fluco.png", stock: 100 },

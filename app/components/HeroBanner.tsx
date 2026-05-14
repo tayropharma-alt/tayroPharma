@@ -44,13 +44,14 @@ export default function HeroBanner() {
       }`}
     >
       <Image
-        src="/images/hero.png"
-        alt="Bienvenidos a Tayro Pharma"
-        width={1600}
-        height={600}
-        priority
-        className="w-full h-auto object-cover shadow"
-      />
+  src="/images/hero.png"
+  alt="Bienvenidos a Tayro Pharma"
+  width={1600}
+  height={600}
+  priority
+  className="w-full h-auto object-cover shadow"
+  unoptimized
+/>
       <button
         onClick={cerrar}
         className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm hover:bg-black/80 transition"

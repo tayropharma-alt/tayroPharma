@@ -39,10 +39,10 @@ const TELEFONOS_VENDEDORES: Record<"miguel" | "juan", string> = {
 };
 
 const CODIGOS: Record<string, { telefono: string; precioMultiplier: number }> = {
-  "0007": { telefono: "3202417939", precioMultiplier: 1 },      // Juan P
-  "0404": { telefono: "3202417939", precioMultiplier: 1.05 },  // Juan P (+5%)
-  "1905": { telefono: "3146171647", precioMultiplier: 1 },      // Miguel
-  "0002": { telefono: "3146171647", precioMultiplier: 1.05 },  // Miguel (+5%)
+  "4545": { telefono: "3202417939", precioMultiplier: 1 },      // Juan P
+  "8888": { telefono: "3202417939", precioMultiplier: 1.05 },  // Juan P (+5%)
+  "0520": { telefono: "3146171647", precioMultiplier: 1 },      // Miguel
+  "1741": { telefono: "3146171647", precioMultiplier: 1.05 },  // Miguel (+5%)
   
 };
 
@@ -101,7 +101,7 @@ const productos: Producto[] = [
   { id: 5897, nombre: "Enersal Sabor a Fresa x30 Sobres", precio: 58000, categoria: "Más Vendidos", imagen: "/enefr.png", stock: 0, masVendido: true },
   { id: 9778, nombre: "Enersal Sabor a Uva x30 Sobres", precio: 58000, categoria: "Más Vendidos", imagen: "/eneuv.png", stock: 100, masVendido: true },
   { id: 3599, nombre: "Enersal Sabor a Mandarina x30 Sobres", precio: 58000, categoria: "Más Vendidos", imagen: "/eneman.png", stock: 50, masVendido: true },
-  { id: 7899, nombre: "VENOVIT 5% Bolsa x500ml", precio: 18000, categoria: "Más Vendidos", imagen: "/veno.png", stock: 0, masVendido: true },
+  { id: 7899, nombre: "VENOVIT 5% Bolsa x500ml", precio: 18300, categoria: "Más Vendidos", imagen: "/veno.png", stock: 50, masVendido: true },
   { id: 7797, nombre: "Vitamina E 400 U:I x150 Caps Procaps", precio: 45000, categoria: "Más Vendidos", imagen: "/viep.png", stock: 0, masVendido: true },
   { id: 5110, nombre: "Enematrol Suspensión Maracuya x133ml", precio: 15800, categoria: "Más Vendidos", imagen: "/etrol.png", stock: 100, masVendido: true },
   { id: 5111, nombre: "Enematrol Suspensión Limón x133ml", precio: 15800, categoria: "Más Vendidos", imagen: "/etrolim.png", stock: 100, masVendido: true },
@@ -160,9 +160,9 @@ const productos: Producto[] = [
   { id: 9930, nombre: "Fibrilok Acido Tranexánico 500mg x10 Tbs", precio: 18600, categoria: "Más Vendidos", imagen: "/fii.png", stock: 50, masVendido: true },
 
 
-  { id: 32, nombre: "Pedialyte 60meq 500ml Fresa", precio: 8900, categoria: "Más Vendidos", imagen: "/pfr.png", stock: 50, masVendido: true },
+  { id: 32, nombre: "Pedialyte 60meq 500ml Fresa", precio: 8900, categoria: "Más Vendidos", imagen: "/pfr.png", stock: 0, masVendido: true },
   { id: 1232, nombre: "Pedialyte 60meq 500ml Uva", precio: 8900, categoria: "Más Vendidos", imagen: "/puv.png", stock: 50, masVendido: true },
-  { id: 1132, nombre: "Pedialyte 60meq 500ml Manzana", precio: 8900, categoria: "Más Vendidos", imagen: "/pman.png", stock: 50, masVendido: true },
+  { id: 1132, nombre: "Pedialyte 60meq 500ml Manzana", precio: 8900, categoria: "Más Vendidos", imagen: "/pman.png", stock: 0, masVendido: true },
   { id: 1332, nombre: "Pedialyte 60meq 500ml Coco", precio: 8900, categoria: "Más Vendidos", imagen: "/pco.png", stock: 50, masVendido: true },
 
 
@@ -183,7 +183,7 @@ const productos: Producto[] = [
   { id: 54, nombre: "Novoxican (Meloxicam 15mg) x10 Tbs", precio: 3000, categoria: "Más Vendidos", imagen: "/novcan.png", stock: 100, masVendido: true },
 
   { id: 55, nombre: "Impomel (Meloxicam 15mg) x10 Tbs", precio: 3200, categoria: "Más Vendidos", imagen: "/impomel.png", stock: 20, masVendido: true },
-  { id: 56, nombre: "Inoxicam (Meloxicam) 15mg x10 Tbs", precio: 2400, categoria: "Más Vendidos", imagen: "/inoxi.png", stock: 100, masVendido: true },
+  { id: 56, nombre: "Inoxicam (Meloxicam) 15mg x10 Tbs", precio: 2400, categoria: "Más Vendidos", imagen: "/inoxi.png", stock: 0, masVendido: true },
   { id: 57, nombre: "Veran D (Piroxicam 20mg) x10 Caps", precio: 6700, categoria: "Más Vendidos", imagen: "/verand.png", stock: 0, masVendido: true },
   { id: 58, nombre: "Metformina 850mg x30 Tbs Pisa", precio: 6000, categoria: "Más Vendidos", imagen: "/pisa6.png", stock: 100, masVendido: true },
   { id: 59, nombre: "Omeprazol 20mg x250 Cap", precio: 32900, categoria: "Anglopharma", imagen: "/omeprazola.png", stock: 0, },
@@ -216,6 +216,7 @@ const productos: Producto[] = [
   { id: 86, nombre: "Alka-Seltzer x60 Tab (Bayer)", precio: 43500, categoria: "Más Vendidos", imagen: "/alka.png", stock: 20, masVendido: true },
   { id: 4550, nombre: "Deltazitrom Azitromicina 500mg x3 Tbs", precio: 3000, categoria: "Más Vendidos", imagen: "/delzi.png", stock: 100, masVendido: true },
   { id: 2795, nombre: "Torrox Etoricoxib 120mg x10 Tbs", precio: 17700, categoria: "Más Vendidos", imagen: "/torrox.png", stock: 50, masVendido: true },
+  { id: 8040, nombre: "Epibalin Pregabalina 75mg x30 Caps", precio: 14000, categoria: "Más Vendidos", imagen: "/epi.png", stock: 50, masVendido: true },
 
   { id: 87, nombre: "Electrolit x625ml Maracuya", precio: 6900, categoria: "Más Vendidos", imagen: "/marac.png", stock: 1000, masVendido: true },
   { id: 1187, nombre: "Electrolit x625ml Uva", precio: 6900, categoria: "Más Vendidos", imagen: "/eleuv.png", stock: 1000, masVendido: true },
@@ -266,7 +267,7 @@ const productos: Producto[] = [
 //GENFAR//
 { id: 8528, nombre: "Acetaminofen 500mg x100 Tbs (GF)", precio: 5200, categoria: "Genfar", imagen: "/a51.png", stock: 0 },
 { id: 3358, nombre: "Clonidina 0,15 mg x20 Tbs (GF)", precio: 12200, categoria: "Genfar", imagen: "/clogf.png", stock: 0 },
-{ id: 8748, nombre: "Piroxicam 20mg x10 Tbs (GF)", precio: 2600, categoria: "Genfar", imagen: "/pgf10.png", stock: 0 },
+{ id: 8748, nombre: "Piroxicam 20mg x10 Tbs (GF)", precio: 2600, categoria: "Genfar", imagen: "/pgf10.png", stock: 100 },
 { id: 2899, nombre: "Ibuprofeno + Metocarbamol 200/500mg x30 Tbs (GF)", precio: 16900, categoria: "Genfar", imagen: "/ibu200.png", stock: 50 },
 
 { id: 129, nombre: "Ibuprofeno 800mg x50 Tbs (GF)", precio: 9200, categoria: "Genfar", imagen: "/ibu800gf.png", stock: 50 },
@@ -275,7 +276,7 @@ const productos: Producto[] = [
 { id: 132, nombre: "Tamsulosina Clorhidrato 0.4mg x30 Cap (GF)", precio: 26500, categoria: "Genfar", imagen: "/tansgf.png", stock: 50 },
 { id: 133, nombre: "Cefalexina 500mg x10 Cap (GF)", precio: 5400, categoria: "Genfar", imagen: "/cefgf.png", stock: 200 },
 { id: 134, nombre: "Dexametasona 8mg/2ml x10 Amp (GF)", precio: 18800, categoria: "Genfar", imagen: "/dgf.png", stock: 0 },
-{ id: 135, nombre: "Lansoprazol 30mg x14 Cap (GF)", precio: 8000, categoria: "Genfar", imagen: "/langf.png", stock: 0 },
+{ id: 135, nombre: "Lansoprazol 30mg x14 Cap (GF)", precio: 8000, categoria: "Genfar", imagen: "/langf.png", stock: 50 },
 { id: 136, nombre: "Azitromicina 200mg/5ml x15ml (suspensión) (GF)", precio: 10944, categoria: "Genfar", imagen: "/azisgf.png", stock: 0 }, // Próximo a llegar
 { id: 137, nombre: "Amoxicilina 500mg x50 Caps (GF)", precio: 17800, categoria: "Genfar", imagen: "/amogf.png", stock: 100 },
 { id: 1137, nombre: "Amoxicilina Suspensión 250mg x100 ml (GF)", precio: 6900, categoria: "Genfar", imagen: "/agf2.png", stock: 0 },
@@ -288,22 +289,22 @@ const productos: Producto[] = [
 
 { id: 139, nombre: "Tramadol 50mg x10 Caps (GF)", precio: 8500, categoria: "Genfar", imagen: "/tgf.png", stock: 0 },
 { id: 140, nombre: "Fluconazol 200mg x4 Caps (GF)", precio: 7200, categoria: "Genfar", imagen: "/flgf.png", stock: 0 },
-{ id: 141, nombre: "Doxiciclina 100mg x10 Tbs (GF)", precio: 5700, categoria: "Genfar", imagen: "/doxicigf.png", stock: 0 },
+{ id: 141, nombre: "Doxiciclina 100mg x10 Tbs (GF)", precio: 5700, categoria: "Genfar", imagen: "/doxicigf.png", stock: 50 },
 { id: 142, nombre: "Cefalexina Suspensión 250mg x60ml (GF)", precio: 6400, categoria: "Genfar", imagen: "/cesgf.png", stock: 200 },
 { id: 144, nombre: "Diclofenaco 50mg x30 Tbs (GF)", precio: 3600, categoria: "Genfar", imagen: "/d50fgg.png", stock: 70 }, // Próximo a llegar
-{ id: 145, nombre: "Diclofenaco 75mg/3ml x10 Amp (GF)", precio: 11500, categoria: "Genfar", imagen: "/digf.png", stock: 0 }, // Próximo a llegar
-{ id: 146, nombre: "Lincomicina 600mg/2ml x10 Amp (GF)", precio: 18000, categoria: "Genfar", imagen: "/l600.png", stock: 0 },
+{ id: 145, nombre: "Diclofenaco 75mg/3ml x10 Amp (GF)", precio: 12400, categoria: "Genfar", imagen: "/digf.png", stock: 100 }, // Próximo a llegar
+{ id: 146, nombre: "Lincomicina 600mg/2ml x10 Amp (GF)", precio: 18000, categoria: "Genfar", imagen: "/l600.png", stock: 50 },
 { id: 147, nombre: "Genfar Kids Ibuprofeno Suspensión x120ml (GF)", precio: 7400, categoria: "Genfar", imagen: "/isusgf.png", stock: 0 },
 { id: 3778, nombre: "Loratadina Jarabe 5mg/5ml x100 ml (GF)", precio: 5300, categoria: "Genfar", imagen: "/lorasusgf.png", stock: 100 },
 
 { id: 148, nombre: "Trimebutina 200mg x30 Tbs (GF)", precio: 13900, categoria: "Genfar", imagen: "/tgf200.png", stock: 0 },
-{ id: 149, nombre: "Valsartán 160mg x14 Tbs (GF)", precio: 13900, categoria: "Genfar", imagen: "/val160.png", stock: 0 },
+{ id: 149, nombre: "Valsartán 160mg x14 Tbs (GF)", precio: 14200, categoria: "Genfar", imagen: "/val160.png", stock: 50 },
 { id: 150, nombre: "Ácido Acetilsalicílico 100mg x100 Tbs (GF)", precio: 16400, categoria: "Genfar", imagen: "/aa.png", stock: 90 },
 { id: 151, nombre: "Losartán + Hidroclotiazida 50mg/12.5mg x30 Tbs (GF)", precio: 23000, categoria: "Genfar", imagen: "/lhgf.png", stock: 0 }, // Próximo a llegar
 { id: 152, nombre: "Furosemida 40mg x100 Tbs (GF)", precio: 10500, categoria: "Genfar", imagen: "/fugf.png", stock: 0 },
-{ id: 153, nombre: "Pregabalina 75mg x30 Cap (GF)", precio: 20200, categoria: "Genfar", imagen: "/pregaa.png", stock: 40 }, // Próximo a llegar
+{ id: 153, nombre: "Pregabalina 75mg x30 Cap (GF)", precio: 21300, categoria: "Genfar", imagen: "/pregaa.png", stock: 40 }, // Próximo a llegar
 { id: 154, nombre: "Diosmina Hesperidina 450mg/50mg x30 Tbs (GF)", precio: 18000, categoria: "Genfar", imagen: "/dhgf4.png", stock: 0 }, // Próximo a llegar
-{ id: 155, nombre: "Tinidazol 500mg x8 Tbs (GF)", precio: 3600, categoria: "Genfar", imagen: "/t500gf.png", stock: 0 },
+{ id: 155, nombre: "Tinidazol 500mg x8 Tbs (GF)", precio: 3600, categoria: "Genfar", imagen: "/t500gf.png", stock: 50 },
 { id: 156, nombre: "Celecoxib 200mg x10 Caps", precio: 6900, categoria: "Genfar", imagen: "/celogf.png", stock: 50 },
 { id: 157, nombre: "Triconjugada x40gr Genfar (GF)", precio: 17800, categoria: "Genfar", imagen: "/tricogf40.png", stock: 50 },
 { id: 620, nombre: "Triconjugada x20gr Genfar (GF)", precio: 11500, categoria: "Genfar", imagen: "/tricofg20.png", stock: 0 },
@@ -378,7 +379,7 @@ const productos: Producto[] = [
 { id: 210, nombre: "Mieltertos Día x24 Sobres", precio: 40500, categoria: "Antigripales", imagen: "/mield.png", stock: 20 },
 { id: 213, nombre: "Mieltertos Noche x24 Sobres", precio: 40500, categoria: "Antigripales", imagen: "/mielnoc.png", stock: 20 },
 { id: 1213, nombre: "Resfrygrip x25 Sobres", precio: 50000, categoria: "Antigripales", imagen: "/resfry.png", stock: 0 },
-{ id: 4810, nombre: "Noxpirin Plus x120 Caps", precio: 120000, categoria: "Antigripales", imagen: "/nox120.png", stock: 10 },
+{ id: 4810, nombre: "Noxpirin Plus x120 Caps", precio: 120000, categoria: "Antigripales", imagen: "/nox120.png", stock: 20 },
 
 { id: 6340, nombre: "Noxpirin Junior x24 Sobres", precio: 36500, categoria: "Antigripales", imagen: "/noxpij24.png", stock: 30 },
 { id: 214, nombre: "Ashar Gripa x100 Cap", precio: 51500, precioAntes:54600, categoria: "Memphis", imagen: "/ashar.png", stock: 50 },
@@ -529,7 +530,7 @@ const productos: Producto[] = [
 { id: 286, nombre: "Betametasona 0.1% x40gr", precio: 6000, categoria: "Laproff", imagen: "/betame001lp.png", stock: 50 },
 { id: 287, nombre: "Hidroclorotiazida 25mg x400 Tbs", precio: 30000, categoria: "Laproff", imagen: "/hr400.png", stock: 0 },
 { id: 288, nombre: "Aciclovir 800mg x50 Tbs", precio: 50000, categoria: "Laproff", imagen: "/aci800.png", stock: 50 },
-{ id: 289, nombre: "Prednisolona 5mg x100 Tbs", precio: 9700, categoria: "Laproff", imagen: "/pred100.png", stock: 100 },
+{ id: 289, nombre: "Prednisolona 5mg x100 Tbs", precio: 9700, categoria: "Laproff", imagen: "/pred100.png", stock: 0 },
 { id: 290, nombre: "Loperamida 2mg x240 Tbs", precio: 59500, categoria: "Laproff", imagen: "/lope240.png", stock: 20 },
 { id: 291, nombre: "Atorvastatina 20mg x50 Tbs", precio: 7400, categoria: "Laproff", imagen: "/at20.png", stock: 0 },
 { id: 292, nombre: "Minoxidil 5% x60ml", precio: 17500, categoria: "Laproff", imagen: "/minox.png", stock: 50 },
@@ -575,7 +576,7 @@ const productos: Producto[] = [
 { id: 324, nombre: "Ketotifeno 100ml", precio: 3800, categoria: "Laproff", imagen: "/feno.png", stock: 150 },
 { id: 325, nombre: "Salbutamol 120ml", precio: 3400, categoria: "Laproff", imagen: "/sallp.png", stock: 0 },
 { id: 326, nombre: "Loratadina 100ml", precio: 5300, categoria: "Laproff", imagen: "/ljr.png", stock: 200 },
-{ id: 327, nombre: "Sulfato Ferroso 120ml", precio: 4900, categoria: "Laproff", imagen: "/s12.png", stock: 40 },
+{ id: 327, nombre: "Sulfato Ferroso 120ml", precio: 4900, categoria: "Laproff", imagen: "/s12.png", stock: 0 },
 { id: 328, nombre: "Difenhidramina 120ml", precio: 4400, categoria: "Laproff", imagen: "/difenlp.png", stock: 0 },
 { id: 329, nombre: "Esomeprazol 40mg x100 Tbs", precio: 89900, precioAntes: 94000, categoria: "Laproff", imagen: "/eee40.png", stock: 20 },
 { id: 632, nombre: "Ketoconazol 200mg x300 Tbs", precio: 126000, categoria: "Laproff", imagen: "/keto300.png", stock: 100 },
@@ -603,17 +604,18 @@ const productos: Producto[] = [
 { id: 615, nombre: "Pasedol 50mg x100 tbs", precio: 21500, categoria: "Ecar", imagen: "/pdol.png", stock: 50 },
 { id: 622, nombre: "Complejo B 10 ml x1 vial (Ecar)", precio: 6500, categoria: "Ecar", imagen: "/cb10ml.png", stock: 240 },
 { id: 623, nombre: "Tiamina 10 ml x1 vial (Ecar)", precio: 5400, categoria: "Ecar", imagen: "/tia10ml.png", stock: 0 },
-{ id: 693, nombre: "Vitamina B12 x10 x1 vial (Ecar)", precio: 9500, categoria: "Ecar", imagen: "/b1210.png", stock: 50 },
+{ id: 693, nombre: "Vitamina B12 x10 x1 vial (Ecar)", precio: 9500, categoria: "Ecar", imagen: "/b1210.png", stock: 0 },
 // ===== COLMED =====
 { id: 350, nombre: "Levotiroxina 100mcg x30 Tbs", precio: 10300, categoria: "Colmed", imagen: "/lev1003.png", stock: 0 }, // Próximo a llegar
 { id: 351, nombre: "Esomeprazol 20mg x30 Tbs", precio: 22000, categoria: "Colmed", imagen: "/eso20c.png", stock: 0 },
 { id: 1351, nombre: "Esomeprazol 40mg x30 Tbs", precio: 25400, categoria: "Colmed", imagen: "/40.png", stock: 0 },
 { id: 355, nombre: "Complejo B 2ml x3 Amp", precio: 9700, categoria: "Colmed", imagen: "/cbx3.png", stock: 0 }, 
-{ id: 2355, nombre: "Metronist x10 ovulos", precio: 19600, categoria: "Colmed", imagen: "/mov.png", stock: 50 }, 
+{ id: 2355, nombre: "Metronist x10 ovulos", precio: 19600, categoria: "Colmed", imagen: "/mov.png", stock: 0 }, 
 { id: 7145, nombre: "Diclofenaco 75mg x10 Amp", precio: 11500, categoria: "Colmed", imagen: "/dcol.png", stock: 0 }, // Próximo a llegar
 { id: 3368, nombre: "Clotrimazol Vaginal al 1% x40gr", precio: 7300, categoria: "Colmed", imagen: "/cvco.png", stock: 0 }, // Próximo a llegar
 { id: 3552, nombre: "Vitamina D3 2000 U.I x100 Caps", precio: 48000, precioAntes: 51500, categoria: "Colmed", imagen: "/d3200.png", stock: 50 }, // Próximo a llegar
 { id: 3750, nombre: "Tramadol 50mg x10 Caps", precio: 7100, categoria: "Colmed", imagen: "/trapco.png", stock: 0 }, // Próximo a llegar
+{ id: 7001, nombre: "FemDuo Metronidazol + Clotrimazol 500/100mg x10 Ovulos", precio: 17500, categoria: "Colmed", imagen: "/femduo.png", stock: 50 }, // Próximo a llegar
 
 { id: 358, nombre: "Levotiroxina Sódica 50mcg x30 Tbs", precio: 8700, categoria: "Colmed", imagen: "/l50co3.png", stock: 0 }, // Próximo a llegar
 { id: 958, nombre: "Levotiroxina Sódica 50mcg x150 Tbs", precio: 28000, categoria: "Colmed", imagen: "/le50150.png", stock: 0 }, 
@@ -647,7 +649,7 @@ const productos: Producto[] = [
 { id: 3374, nombre: "Sildenafilo 50mg x2 Tbs", precio: 1000, categoria: "CoasPharma", imagen: "/silcoas.png", stock: 100 },
 { id: 3689, nombre: "Hidroclorotiazida 25mg x240 Tbs", precio: 11000, categoria: "CoasPharma", imagen: "/h25co.png", stock: 0 },
 { id: 7458, nombre: "Piroxicam Gel 0.5% x30gr", precio: 6600, categoria: "CoasPharma", imagen: "/pi6.png", stock: 110 },
-{ id: 7422, nombre: "Gemfibrozilo 600mg x20 Tbs", precio: 9800, categoria: "CoasPharma", imagen: "/gem600.png", stock: 110 },
+{ id: 9024, nombre: "Gemfibrozilo 600mg x20 Tbs", precio: 9800, categoria: "CoasPharma", imagen: "/gem6000.png", stock: 110 },
 
 
 { id: 1373, nombre: "Metronidazol 500mg x100 Tbs", precio: 15600, categoria: "CoasPharma", imagen: "/meco.png", stock: 0 },
@@ -674,7 +676,7 @@ const productos: Producto[] = [
 
 { id: 385, nombre: "Desloratadina Niños x60ml", precio: 5200, categoria: "CoasPharma", imagen: "/dscos.png", stock: 30 },
 { id: 386, nombre: "Naproxeno 250mg x10 Tbs", precio: 1700, categoria: "CoasPharma", imagen: "/n250co.png", stock: 100 }, // Próximo a llegar
-{ id: 387, nombre: "Ibuprofeno + Metocarbamol x24 Tbs", precio: 17300, categoria: "CoasPharma", imagen: "/im.png", stock: 40 },
+{ id: 387, nombre: "Ibuprofeno + Metocarbamol x24 Tbs", precio: 17900, categoria: "CoasPharma", imagen: "/im.png", stock: 40 },
 { id: 388, nombre: "Ácido Fusídico 2% x15gr", precio: 8100, categoria: "CoasPharma", imagen: "/acidofc.png", stock: 50 },
 { id: 389, nombre: "Naproxeno Sódico 125mg/5ml x80ml", precio: 8700, categoria: "CoasPharma", imagen: "/napcoas.png", stock: 20 },
 { id: 390, nombre: "Dermaskin x20gr", precio: 8900, precioAntes: 10000, categoria: "CoasPharma", imagen: "/derma20.png", stock: 50 },
@@ -696,8 +698,8 @@ const productos: Producto[] = [
 { id: 407, nombre: "Metronidazol Suspensión x120ml", precio: 6800, categoria: "CoasPharma", imagen: "/m250c.png", stock: 120 },
 { id: 408, nombre: "Hidróxido de Aluminio x150ml", precio: 5700, categoria: "CoasPharma", imagen: "/hd150.png", stock: 0 },
 { id: 778, nombre: "Hidróxido de Aluminio x360ml", precio: 10600, categoria: "CoasPharma", imagen: "/ha360.png", stock: 0 },
-{ id: 411, nombre: "Aciclovir Ungüento 5% x15gr", precio: 5500, categoria: "CoasPharma", imagen: "/aciunc.png", stock: 100 },
-{ id: 617, nombre: "Hidrocortisona al 1% x15gr", precio: 4400, categoria: "CoasPharma", imagen: "/hidrocoas.png", stock: 50 },
+{ id: 411, nombre: "Aciclovir Ungüento 5% x15gr", precio: 5200, categoria: "CoasPharma", imagen: "/aciunc.png", stock: 100 },
+{ id: 617, nombre: "Hidrocortisona al 1% x15gr", precio: 4500, categoria: "CoasPharma", imagen: "/hidrocoas.png", stock: 50 },
 { id: 7771, nombre: "Aciclovir 800mg x10 Tbs", precio: 5000, categoria: "CoasPharma", imagen: "/acoas800.png", stock: 0 },
 
   { id: 39, nombre: "Gastrofull Doble Acción x24 Sachets", precio: 37300, categoria: "CoasPharma", imagen: "/gastrofu.png", stock: 50 },
@@ -705,7 +707,7 @@ const productos: Producto[] = [
 { id: 416, nombre: "Hidróxido Magnesia 8.5% x120ml", precio: 4500, categoria: "CoasPharma", imagen: "/hmc.png", stock: 0 },
 { id: 417, nombre: "Naproxeno 500mg x10 Tbs", precio: 4300, categoria: "CoasPharma", imagen: "/nap500co.png", stock: 100 }, // Próximo a llegar
 { id: 418, nombre: "Metoclopramida Gotas 4mg/ml x30ml", precio: 4800, categoria: "CoasPharma", imagen: "/mgco.png", stock: 100 },
-{ id: 419, nombre: "Doxiciclina 100mg x10 Cap", precio: 4000, categoria: "CoasPharma", imagen: "/doxico.png", stock: 0 },
+{ id: 419, nombre: "Doxiciclina 100mg x10 Cap", precio: 4000, categoria: "CoasPharma", imagen: "/doxico.png", stock: 100 },
 { id: 420, nombre: "Aciclovir 200mg x25 Tbs", precio: 8600, categoria: "CoasPharma", imagen: "/ac200.png", stock: 50 },
 
 { id: 635, nombre: "Tinidazol 500mg x8 Tbs", precio: 3400, categoria: "CoasPharma", imagen: "/tini.png", stock: 100 },
@@ -751,7 +753,7 @@ const productos: Producto[] = [
 { id: 464, nombre: "Trimetoprima Sulfa F 160/800mg x20 Tbs", precio: 8000, categoria: "Memphis", imagen: "/memtri.png", stock: 200 },
 { id: 465, nombre: "Trimebutina 200mg x30 Tbs", precio: 14000, categoria: "Memphis", imagen: "/trimebu.png", stock: 0 },
 { id: 473, nombre: "Carvedilol 12.5mg x30 Tbs", precio: 8700, categoria: "Memphis", imagen: "/car125.png", stock: 130 },
-{ id: 474, nombre: "Amlodipino 10mg x10 Tbs", precio: 2200, categoria: "Memphis", imagen: "/a10mg.png", stock: 50 },
+{ id: 474, nombre: "Amlodipino 10mg x10 Tbs", precio: 2200, categoria: "Memphis", imagen: "/a10mg.png", stock: 0 },
 { id: 475, nombre: "Clotrimazol Vaginal al 2% x20gr", precio: 11900, categoria: "Memphis", imagen: "/clotr2.png", stock: 50 }, // Próximo a llegar
 { id: 476, nombre: "Carvedilol 6.25mg x30 Tbs", precio: 6000, categoria: "Memphis", imagen: "/car625.png", stock: 280 },
 { id: 477, nombre: "Clindamicina 300mg x40 Caps", precio: 40600, categoria: "Memphis", imagen: "/clin40.png", stock: 20 },
@@ -763,14 +765,14 @@ const productos: Producto[] = [
 { id: 484, nombre: "Amoxicilina Suspensión 250mg/5ml x100ml", precio: 5900, categoria: "La Sante", imagen: "/amox10.png", stock: 100 },
 { id: 486, nombre: "Oximetazolina 0.05% x15ml (Adulto)", precio: 15800, categoria: "La Sante", imagen: "/oxils05.png", stock: 100 },
 { id: 5629, nombre: "Loratadina 10mg X10 Tbs", precio: 1800, categoria: "La Sante", imagen: "/lor10.png", stock: 0 },
-{ id: 1629, nombre: "Losartan 50mg x30 Tbs", precio: 4300, categoria: "La Sante", imagen: "/lls.png", stock: 0 },
+{ id: 1629, nombre: "Losartan 50mg x30 Tbs", precio: 4400, categoria: "La Sante", imagen: "/lls.png", stock: 100 },
 { id: 1729, nombre: "Azitromicina 500mg x3 Tbs", precio: 3800, categoria: "La Sante", imagen: "/azils.png", stock: 0 },
 { id: 1232, nombre: "Vitamina C 500mg x100 Tbs LS Naranja", precio: 26500, categoria: "La Sante", imagen: "/vlsn.png", stock: 100 },
 { id: 2232, nombre: "Vitamina C 500mg x100 Tbs LS Mandarina", precio: 26500, categoria: "La Sante", imagen: "/vlsm.png", stock: 0 },
 { id: 8886, nombre: "Oximetazolina 0.025% x15ml Niños", precio: 13800, categoria: "La Sante", imagen: "/ox25.png", stock: 0 },
 
 
-{ id: 118, nombre: "Acnotin Isotretinoina USP 20 mg x30 Caps", precio: 68000, categoria: "Más Vendidos", imagen: "/acno.png", stock: 0, masVendido: true },
+{ id: 118, nombre: "Acnotin Isotretinoina USP 20 mg x30 Caps", precio: 68000, categoria: "Más Vendidos", imagen: "/acno.png", stock: 50, masVendido: true },
 { id: 96, nombre: "A-Listant Prueba de Embarazo Cassette x1 Und", precio: 1500, categoria: "Más Vendidos", imagen: "/prube.png", stock: 0, masVendido: true },
 { id: 83, nombre: "Acetato de Aluminio x120ml Totalmax", precio: 3565, categoria: "Más Vendidos", imagen: "/aceto.png", stock: 0, masVendido: true, ivaIncluido: true },
 { id: 777, nombre: "Amoxiclin Duo (Amoxicilina + Ácido Clavulánico) 500 + 125 mg x16 Tbs", precio: 35700, categoria: "Más Vendidos", imagen: "/amoxiclin.png", stock: 0, masVendido: true },
@@ -815,7 +817,7 @@ const productos: Producto[] = [
 { id: 2493, nombre: "Dipirona Sódica 1g/2ml Bolsa x10 Amp", precio: 9000,  categoria: "Ampolleteria", imagen: "/dipi.png", stock: 0  }, // Próximo
 { id: 4846, nombre: "Lincofar Lincomicina 600mg/2ml x10 Amp", precio: 18500, categoria: "Ampolleteria", imagen: "/lincofar.png", stock: 20 },
 { id: 5787, nombre: "Dexametasona Fosfato 8mg/2ml (Bolsa) x10 und Biosano", precio: 11400,  categoria: "Ampolleteria", imagen: "/dexabio.png", stock: 0 },
-{ id: 6412, nombre: "LincoDelt Lincomicina 600mg/2ml x10 Amp", precio: 15500, categoria: "Ampolleteria", imagen: "/lincode.png", stock: 50 },
+{ id: 6412, nombre: "LincoDelt Lincomicina 600mg/2ml x10 Amp", precio: 15500, categoria: "Ampolleteria", imagen: "/Lincodelt.png", stock: 50 },
 
 { id: 3490, nombre: "BetaTreinta x1 ml x1 vial",          precio: 17500,  categoria: "Ampolleteria", imagen: "/beta30.png", stock: 50 },
 { id: 6490, nombre: "Hidrocortizona 100mg x1 Vial Vitalis",  precio: 7000,  categoria: "Ampolleteria", imagen: "/hiv.png", stock: 0 },
@@ -829,7 +831,7 @@ const productos: Producto[] = [
 { id: 5478, nombre: "Diclofenaco 75mg x10 amp Farmionni", precio: 9800,  categoria: "Ampolleteria", imagen: "/difar.png", stock: 50 },
 
 { id: 494, nombre: "Neurobión 3+3",                                   precio: 38700, categoria: "Ampolleteria", imagen: "/nx6.png", stock: 0  }, 
-{ id: 495, nombre: "Kenacort-A (Acetonida de Triamcinolona) x1 vial x5ml",        precio: 44500, categoria: "Ampolleteria", imagen: "/kena.png", stock: 50  }, // Próximo
+{ id: 495, nombre: "Kenacort-A (Acetonida de Triamcinolona) x1 vial x5ml",        precio: 44500, categoria: "Ampolleteria", imagen: "/kena.png", stock: 0  }, // Próximo
 { id: 1495, nombre: "Furosemida Bolsa X10 Amp Biosano",        precio: 14500, categoria: "Ampolleteria", imagen: "/fubio.png", stock: 50  }, 
 { id: 2495, nombre: "Metoclopramida Bolsa X10 Amp Biosano", precio: 15000, precioAntes: 15000, categoria: "Ampolleteria", imagen: "/mebio.png", stock: 20  }, 
 { id: 5494, nombre: "Neurobión DC x3 Amp",  precio: 79900, categoria: "Ampolleteria", imagen: "/neudc.png", stock: 0  }, 
@@ -837,7 +839,7 @@ const productos: Producto[] = [
 
 { id: 496, nombre: "K-Delprazol (Omeprazol) x1 vial",                 precio: 3200,  categoria: "Ampolleteria", imagen: "/k-del.png", stock: 100 },
 { id: 497, nombre: "Antidol B1+B6+B1 2ml x3 amp",                     precio: 19900, categoria: "Ampolleteria", imagen: "/antidol.png", stock: 100 },
-{ id: 498, nombre: "Gentamicina 160mg/2ml x10 amp (Farmionni)",       precio: 16800, categoria: "Ampolleteria", imagen: "/gentafar.png", stock: 50 },
+{ id: 498, nombre: "Gentamicina 160mg/2ml x10 amp (Farmionni)",       precio: 16800, categoria: "Ampolleteria", imagen: "/gentafar.png", stock: 0 },
 { id: 499, nombre: "Bedoyecta x3 amp",                                precio: 36500, categoria: "Ampolleteria", imagen: "/bedoy.png", stock: 100 },
 { id: 500, nombre: "Penicilina 1.2 mill x1 vial Sigma",             precio: 2500,  categoria: "Ampolleteria", imagen: "/pen1.2.png", stock: 0 },
 { id: 1500, nombre: "Penicilina 2.4 mill x1 vial Delta",             precio: 3300,  categoria: "Ampolleteria", imagen: "/pen2.4.png", stock: 240 },
@@ -902,7 +904,7 @@ const productos: Producto[] = [
 { id: 5422, nombre: "Naprox Naproxeno 125mg/5ml x80 ml", precio: 6000, categoria: "Jarabes y soluciones", imagen: "/naprox.png", stock: 0 },
 
 { id: 1548, nombre: "Pediazinc Sulfato de Zinc x120 ml", precio: 10400, categoria: "Jarabes y soluciones", imagen: "/pezi.png", stock: 0 },
-{ id: 2548, nombre: "Hidroxicina HCI 0.25% x120 ml", precio: 8600, categoria: "Anglopharma", imagen: "/hidran.png", stock: 120 },
+{ id: 2548, nombre: "Hidroxicina HCI 0.25% x120 ml", precio: 8600, categoria: "Anglopharma", imagen: "/hidran.png", stock: 0 },
 
 { id: 549, nombre: "Noktos Adultos (Bromhexina + Guayacolato) x120 ml", precio: 7500, categoria: "Jarabes y soluciones", imagen: "/nokad.png", stock: 0 },
 { id: 550, nombre: "Noktos Niños (Bromhexina + Guayacolato) x120 ml", precio: 7500, categoria: "Jarabes y soluciones", imagen: "/nokni.png", stock: 0 },
@@ -911,7 +913,7 @@ const productos: Producto[] = [
 { id: 553, nombre: "Zetygrip 4 x60 ml", precio: 9000, categoria: "Jarabes y soluciones", imagen: "/z60ml.png", stock: 50 },
 { id: 557, nombre: "Desloratadina 0.05% x60 ml (Memphis)", precio: 6100, categoria: "Memphis", imagen: "/deskids.png", stock: 50 },
 
-{ id: 558, nombre: "Multi Soluter x50 ml", precio: 8400, categoria: "Jarabes y soluciones", imagen: "/multso.png", stock: 50, ivaIncluido: true },
+{ id: 558, nombre: "Multi Soluter x50 ml", precio: 11619, categoria: "Jarabes y soluciones", imagen: "/multso.png", stock: 50, ivaIncluido: true },
 { id: 559, nombre: "Triatusic (Dextrometorfano + Ambroxol + Teofilina) x120 ml", precio: 12600, categoria: "Bioquifar", imagen: "/tria.png", stock: 0 },
 { id: 560, nombre: "Komilon Appetite (Multivitamínico) x360 ml", precio: 14200, categoria: "Jarabes y soluciones", imagen: "/komi.png", stock: 70 },
 { id: 561, nombre: "Multicebrin (Multivitamínico) x360 ml", precio: 12200, categoria: "Jarabes y soluciones", imagen: "/multic.png", stock: 90 },
@@ -1023,14 +1025,14 @@ const productos: Producto[] = [
 { id: 4269, nombre: "Simpiox (Ivermectina 0.6%) 5 ml", precio: 8500, categoria: "Gotas", imagen: "/simpi.png", stock: 0 },
 
 { id: 574, nombre: "Nazil (Nafazolina Clorhidrato 0.1%) 15 ml", precio: 10500, categoria: "Gotas", imagen: "/nazil.png", stock: 0 },
-{ id: 575, nombre: "VitaTriol (Triconjugada) 5 ml", precio: 7400, categoria: "Gotas", imagen: "/vitagt.png", stock: 0 },
+{ id: 575, nombre: "VitaTriol (Triconjugada) 5 ml", precio: 7300, categoria: "Gotas", imagen: "/vitagt.png", stock: 240 },
 { id: 576, nombre: "Tikoj (Cromoglicato Sódico 4%) 5 ml", precio: 8000, categoria: "Gotas", imagen: "/tikoj.png", stock: 40 },
 { id: 577, nombre: "Sulfaoftal (Sulfacetamida Sódica 100 mg/ml) 15 ml", precio: 10700, categoria: "Gotas", imagen: "/sulfaof.png", stock: 20 },
 { id: 578, nombre: "Fluoftal (Fluorometalona 0.1%) 5 ml", precio: 23500, categoria: "Gotas", imagen: "/fluof.png", stock: 10 },
 { id: 579, nombre: "Eye Zul (Nafazolina Clorhidarto 0.1%) 7 ml", precio: 6600, categoria: "Gotas", imagen: "/zuln.png", stock: 100 },
 { id: 580, nombre: "Cetirizina gotas 15 ml", precio: 7400, categoria: "Memphis", imagen: "/cetigts.png", stock: 50 },
 { id: 581, nombre: "Fire Lips (Ácido Salicílico) 10 ml", precio: 8000, categoria: "Gotas", imagen: "/fire.png", stock: 220 },
-{ id: 621, nombre: "Oximetazolina 0,05% (Adulto) x15 ml pb", precio: 6900, categoria: "Gotas", imagen: "/oxipb.png", stock: 100 },
+{ id: 621, nombre: "Oximetazolina 0,05% (Adulto) x15 ml pb", precio: 6900, categoria: "Gotas", imagen: "/oxipb.png", stock: 0 },
 { id: 9148, nombre: "Oxifree Oximetazolina 0.05 Adulto x15 ml", precio: 7200, categoria: "Gotas", imagen: "/oxifree.png", stock: 0 },
 
 { id: 583, nombre: "Oftalmax (Triconjugada) 5 ml", precio: 7000, categoria: "Gotas", imagen: "/oftalmax.png", stock: 0 },
@@ -1075,7 +1077,7 @@ const productos: Producto[] = [
 
 { id: 604, nombre: "Cinta Microporosa Color Piel (12.5 mm x 5 yds) x Und Supreme", precio: 1400, categoria: "Biosanitarios", imagen: "/s12x5.png", stock: 100 }, // Próximo a llegar
 { id: 605, nombre: "Cinta Microporosa Color Piel (1\" x 5 yds) x Und Supreme", precio: 2000, categoria: "Biosanitarios", imagen: "/s1x5.png", stock: 0 },
-{ id: 606, nombre: "Cinta Microporosa Color Piel (2\" x 5 yds) x Und Supreme", precio: 3600, categoria: "Biosanitarios", imagen: "/s2x5.png", stock: 0 },
+{ id: 606, nombre: "Cinta Microporosa Color Piel (2\" x 5 yds) x Und Supreme", precio: 3600, categoria: "Biosanitarios", imagen: "/s2x5.png", stock: 50 },
 { id: 608, nombre: "Baxter Cloruro de Sodio 0.9% x1000 ml", precio: 4900, categoria: "Biosanitarios", imagen: "/b1000.png", stock: 100 },
 { id: 609, nombre: "Curas Color Piel x100 (Medicare)", precio: 4800, categoria: "Biosanitarios", imagen: "/curas.png", stock: 100 },
 { id: 610, nombre: "Lactato de Ringer x500 ml (Baxter)", precio: 2900, categoria: "Biosanitarios", imagen: "/lacto.png", stock: 100 },
@@ -1136,6 +1138,15 @@ useEffect(() => {
     return () => clearInterval(timer);
   }
 }, [vendedor]);
+
+useEffect(() => {
+    if (vendedor === "juan") {
+      const timer = setInterval(() => {
+        setCurrentBanner((prev) => (prev === 0 ? 2 : 0)); // <-- Cambiado a 2 para que muestre la rifa
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [vendedor]);
 
   useEffect(() => {
     const savedCart = localStorage.getItem("tayro:cart");
@@ -1527,10 +1538,10 @@ useEffect(() => {
              h-[220px] sm:h-[280px] md:h-[400px] max-w-[1200px] bg-white"
 >
   <img
-    src="/rifa-camiseta.jpg"
-    alt="Rifa Camiseta Selección"
-    className="w-full h-full object-contain md:object-cover"
-  />
+  src={vendedor === "juan" ? "/rifa-camiseta-juan.jpg" : "/rifa-camiseta.jpg"}
+  alt="Rifa Camiseta Selección"
+  className="w-full h-full object-contain md:object-cover"
+/>
 
   <div className="absolute bottom-4 sm:bottom-6 md:bottom-14 left-1/2 md:left-auto 
                   -translate-x-1/2 md:translate-x-0 md:right-10 z-30">
@@ -1562,7 +1573,9 @@ useEffect(() => {
 
     </div>
   </div>
+  
 )}
+
 
       {/* --- SECCIÓN 2: LABORATORIOS / CATEGORÍAS (ABAJO DEL BANNER) --- */}
       <div className="bg-white border-b border-slate-200 py-6 shadow-sm relative z-20">
